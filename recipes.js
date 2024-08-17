@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ingredients: ['Sliced Potato', 'Sightings Seasoning', 'Chicken', 'Rice'],
             keywords: ['curry', 'andromeda', 'invader']
         },
-        { 
+                { 
             name: 'Crater Cinnamon Roll Pancakes', 
             ingredients: ['Cinnamon', 'Flour', 'Egg', 'Sugar'],
             keywords: ['pancakes', 'crater', 'cinnamon']
@@ -120,8 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function selectRecipe(recipe) {
-        if (!selectedRecipes.includes(recipe)) {
-            selectedRecipes.push(recipe);
+        const quantity = prompt(`How many of ${recipe.name} would you like to add?`, "1");
+        if (quantity !== null && !isNaN(quantity) && quantity > 0) {
+            selectedRecipes.push({ recipe, quantity: parseInt(quantity) });
             updateSelectedRecipes();
         }
     }
@@ -132,16 +133,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const totalIngredients = {};
 
-        selectedRecipes.forEach(recipe => {
+        selectedRecipes.forEach(({ recipe, quantity }) => {
             const li = document.createElement('li');
-            li.textContent = recipe.name;
+            li.textContent = `${quantity}x ${recipe.name}`;
             selectedRecipesList.appendChild(li);
 
             recipe.ingredients.forEach(ingredient => {
                 if (totalIngredients[ingredient]) {
-                    totalIngredients[ingredient]++;
+                    totalIngredients[ingredient] += quantity;
                 } else {
-                    totalIngredients[ingredient] = 1;
+                    totalIngredients[ingredient] = quantity;
                 }
             });
         });
@@ -156,6 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('sortBtn').addEventListener('click', () => {
         recipes.sort((a, b) => a.name.localeCompare(b.name));
         displayRecipes();
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+        selectedRecipes = [];
+        updateSelectedRecipes();
     });
 
     displayRecipes();
