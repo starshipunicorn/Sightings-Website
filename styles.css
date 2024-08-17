@@ -75,21 +75,20 @@ body, html {
     font-family: 'Tajawal', sans-serif;
     font-weight: 300;
     border: none;
-    padding: 15px 50px;
+    padding: 0 20px; /* Reduced padding to avoid overflow */
     text-decoration: none;
     color: black;
-    font-size: 1.5em; /* Slightly reduced font size for consistency */
+    font-size: 1.6em; /* Adjusted font size */
     text-transform: uppercase; /* All caps for button text */
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    text-align: center;
-    width: 250px; /* Ensure all buttons have the same width */
-    height: 70px; /* Ensure consistent height across all buttons */
+    width: 250px; /* Consistent width */
+    height: 70px; /* Explicit height */
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Prevents text from overflowing */
+    justify-content: center; /* Flexbox centering */
+    text-align: center;
 }
 
 .button:hover {
