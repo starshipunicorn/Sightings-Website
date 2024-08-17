@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
 body, html {
@@ -58,7 +58,7 @@ body, html {
 
 .top-buttons {
     display: flex;
-    gap: 40px;
+    gap: 60px; /* Increased gap between buttons */
     margin-bottom: 30px;
 }
 
@@ -69,19 +69,49 @@ body, html {
 .button {
     background-color: #eaff82;
     font-family: 'Tajawal', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     border: none;
-    padding: 20px 60px; /* Larger buttons */
+    padding: 15px 50px; /* Slightly smaller buttons */
     text-decoration: none;
     color: black;
-    font-size: 2em;
+    font-size: 1.8em;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
-    min-width: 300px;
+    min-width: 250px; /* Reduced width */
 }
 
 .button:hover {
     background-color: #d4e075;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .site-title {
+        font-size: 3em;
+    }
+    .button {
+        font-size: 1.5em;
+        padding: 12px 40px;
+        min-width: 200px;
+    }
+    .top-buttons {
+        gap: 40px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    /* Adjustments for larger screens */
+    .site-title {
+        font-size: 6em;
+    }
+    .button {
+        font-size: 2em;
+        padding: 20px 60px;
+        min-width: 300px;
+    }
+    .top-buttons {
+        gap: 80px;
+    }
 }
