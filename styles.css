@@ -59,8 +59,9 @@ body, html {
 .top-buttons {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Closer together */
+    gap: 50px; /* Increased gap between buttons */
     margin-bottom: 30px;
+    flex-wrap: wrap; /* Allows buttons to stack on smaller screens */
 }
 
 .bottom-button {
@@ -83,7 +84,7 @@ body, html {
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
-    width: 200px; /* Less wide */
+    width: 200px; /* Consistent button size */
 }
 
 .button:hover {
@@ -95,13 +96,18 @@ body, html {
     .site-title {
         font-size: 2.5em; /* Smaller size for small screens */
     }
+    .button-container {
+        width: 90%;
+    }
     .button {
         font-size: 1.5em;
         padding: 12px 40px;
-        width: 150px;
+        width: 100%; /* Buttons take up full width, maintaining equal size */
     }
     .top-buttons, .bottom-button {
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Reduced gap for smaller screens */
     }
 }
 
@@ -113,9 +119,9 @@ body, html {
     .button {
         font-size: 2em;
         padding: 20px 60px;
-        width: 250px;
+        width: 250px; /* Larger consistent button size */
     }
     .top-buttons {
-        gap: 60px; /* Slightly larger gap on large screens */
+        gap: 70px; /* Larger gap on large screens */
     }
 }
