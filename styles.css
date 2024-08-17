@@ -85,6 +85,9 @@ body, html {
     transition: background-color 0.3s ease;
     text-align: center;
     width: 200px; /* Consistent button size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button:hover {
