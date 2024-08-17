@@ -82,7 +82,8 @@ body, html {
     }
 
     .button {
-        width: 80%; /* Make buttons take up more space horizontally on small screens */
+        width: 70%; /* Make buttons slightly smaller on small screens */
+        padding: 12px 40px; /* Adjust padding for smaller buttons */
     }
 
     .site-title {
