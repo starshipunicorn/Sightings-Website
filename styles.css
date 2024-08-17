@@ -59,9 +59,9 @@ body, html {
 .top-buttons {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Increased gap between buttons */
+    gap: 50px; /* Gap between the images */
     margin-bottom: 30px;
-    flex-wrap: wrap; /* Allows buttons to stack on smaller screens */
+    flex-wrap: wrap; /* Allows images to stack on smaller screens */
 }
 
 .bottom-button {
@@ -70,68 +70,14 @@ body, html {
     margin-top: 20px;
 }
 
-.button {
-    background-color: #eaff82;
-    font-family: 'Tajawal', sans-serif;
-    font-weight: 300;
-    border: none;
-    padding: 0 20px; /* Reduced padding to avoid overflow */
-    text-decoration: none;
-    color: black;
-    font-size: 1.6em; /* Adjusted font size */
-    text-transform: uppercase; /* All caps for button text */
-    border-radius: 50px;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 250px; /* Consistent width */
-    height: 70px; /* Explicit height */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Flexbox centering */
-    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.button:hover {
-    background-color: #d4e075;
-}
-
-@media only screen and (max-width: 768px) {
-    /* Adjustments for smaller screens */
-    .site-title {
-        font-size: 2.2em; /* Smaller size for small screens */
-        letter-spacing: 0.1em; /* Further reduce letter spacing to prevent break */
-    }
-    .button-container {
-        width: 90%;
-    }
-    .button {
-        font-size: 1.3em; /* Adjust font size for smaller screens */
-        padding: 12px 40px;
-        width: 100%; /* Buttons take up full width, maintaining equal size */
-        height: 60px; /* Consistent height adjustment */
-    }
-    .top-buttons, .bottom-button {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px; /* Reduced gap for smaller screens */
-    }
-    .top-buttons > .button {
-        width: 80%; /* Ensures buttons maintain a consistent size */
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    /* Adjustments for larger screens */
-    .site-title {
-        font-size: 6em;
-    }
-    .button {
-        font-size: 1.7em; /* Slightly reduced font size for better alignment */
-        padding: 20px 60px;
-        width: 300px; /* Larger consistent button size */
-        height: 80px; /* Larger consistent height */
-    }
-    .top-buttons {
-        gap: 70px; /* Larger gap on large screens */
-    }
+img:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover for effect */
 }
