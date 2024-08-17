@@ -41,7 +41,7 @@ body, html {
     font-size: 4em;
     color: #eaff82;
     text-align: center;
-    letter-spacing: 0.3em; /* Spacing between letters */
+    letter-spacing: 0.2em; /* Adjusted spacing between letters */
     margin: 0;
 }
 
@@ -94,13 +94,14 @@ body, html {
 @media only screen and (max-width: 768px) {
     /* Adjustments for smaller screens */
     .site-title {
-        font-size: 2.5em; /* Smaller size for small screens */
+        font-size: 2.2em; /* Smaller size for small screens */
+        letter-spacing: 0.1em; /* Further reduce letter spacing to prevent break */
     }
     .button-container {
         width: 90%;
     }
     .button {
-        font-size: 1.5em;
+        font-size: 1.4em;
         padding: 12px 40px;
         width: 100%; /* Buttons take up full width, maintaining equal size */
     }
@@ -108,6 +109,9 @@ body, html {
         flex-direction: column;
         align-items: center;
         gap: 20px; /* Reduced gap for smaller screens */
+    }
+    .top-buttons > .button {
+        width: 80%; /* Ensures buttons maintain a consistent size */
     }
 }
 
