@@ -22,16 +22,9 @@ body, html {
 
 .controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align controls to the left */
+    gap: 10px;
     margin-bottom: 20px;
-}
-
-#search {
-    width: 60%;
-    padding: 10px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
 }
 
 #sortBtn, #clearBtn, #backBtn {
@@ -42,7 +35,6 @@ body, html {
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    margin-left: 10px;
     font-weight: 600; /* Bolder text on buttons */
 }
 
@@ -66,7 +58,7 @@ body, html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.2s ease;
-    font-weight: 500; /* Bolder text */
+    font-weight: 700; /* Bolder recipe name */
     color: #333;
 }
 
