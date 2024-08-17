@@ -46,33 +46,28 @@ body, html {
 }
 
 .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 20px;
+    justify-items: center;
     height: 33%; /* Lower third of the page */
     position: absolute;
-    bottom: 10%; /* Adjust as needed to fit the design */
+    bottom: 10%;
     width: 100%;
 }
 
-.top-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 50px; /* Gap between the images */
-    margin-bottom: 30px;
-    flex-wrap: wrap; /* Allows images to stack on smaller screens */
-}
-
-.bottom-button {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+@media(min-width: 768px) {
+    .button-container {
+        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+    }
+    .bottom-button {
+        grid-column: span 2; /* Bottom button spans both columns */
+    }
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    width: 250px; /* Fixed width */
+    height: 70px; /* Fixed height */
     display: block;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -80,4 +75,17 @@ img {
 
 img:hover {
     transform: scale(1.05); /* Slightly enlarge on hover for effect */
+}
+
+@media only screen and (max-width: 768px) {
+    .site-title {
+        font-size: 2.2em; /* Smaller size for small screens */
+        letter-spacing: 0.1em; /* Further reduce letter spacing to prevent break */
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .site-title {
+        font-size: 6em; /* Larger size for large screens */
+    }
 }
