@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Tan+Astoria&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body, html {
     margin: 0;
@@ -10,7 +11,7 @@ body, html {
 }
 
 .background {
-    background-image: url('your-background-image.jpg'); /* Replace with your background image */
+    background-image: url('sightingsufo.jpg'); /* Background image */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -37,9 +38,9 @@ body, html {
 }
 
 .site-title {
-    font-family: 'Tan Astoria', serif;
+    font-family: 'Zeyada', cursive;
     font-size: 5em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: #eaff82;
     text-align: center;
 }
@@ -47,22 +48,32 @@ body, html {
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
+}
+
+.top-buttons {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.bottom-button {
+    margin-top: 20px;
 }
 
 .button {
     background-color: #eaff82;
+    font-family: 'Bebas Neue', sans-serif;
     border: none;
-    padding: 15px 40px;
+    padding: 20px 60px; /* Larger buttons */
     text-decoration: none;
     color: black;
-    font-size: 1.5em;
+    font-size: 2em;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
-    width: 250px;
+    min-width: 300px;
 }
 
 .button:hover {
