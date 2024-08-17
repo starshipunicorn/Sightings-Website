@@ -78,7 +78,7 @@ body, html {
     padding: 15px 50px;
     text-decoration: none;
     color: black;
-    font-size: 1.8em;
+    font-size: 1.5em; /* Slightly reduced font size for consistency */
     text-transform: uppercase; /* All caps for button text */
     border-radius: 50px;
     cursor: pointer;
@@ -89,6 +89,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Prevents text from overflowing */
 }
 
 .button:hover {
@@ -105,7 +106,7 @@ body, html {
         width: 90%;
     }
     .button {
-        font-size: 1.4em;
+        font-size: 1.3em; /* Adjust font size for smaller screens */
         padding: 12px 40px;
         width: 100%; /* Buttons take up full width, maintaining equal size */
         height: 60px; /* Consistent height adjustment */
@@ -126,7 +127,7 @@ body, html {
         font-size: 6em;
     }
     .button {
-        font-size: 2em;
+        font-size: 1.7em; /* Slightly reduced font size for better alignment */
         padding: 20px 60px;
         width: 300px; /* Larger consistent button size */
         height: 80px; /* Larger consistent height */
