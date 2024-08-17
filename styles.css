@@ -58,15 +58,15 @@ body, html {
 
 .top-buttons {
     display: flex;
-    justify-content: space-around;
-    width: 80%; /* Adjust width to position buttons horizontally */
+    justify-content: center;
+    gap: 40px; /* Closer together */
     margin-bottom: 30px;
 }
 
 .bottom-button {
     display: flex;
     justify-content: center;
-    width: 80%; /* Ensure the bottom button is centered */
+    margin-top: 20px;
 }
 
 .button {
@@ -74,10 +74,11 @@ body, html {
     font-family: 'Tajawal', sans-serif;
     font-weight: 300;
     border: none;
-    padding: 15px 50px; /* Slightly smaller buttons */
+    padding: 15px 50px;
     text-decoration: none;
     color: black;
     font-size: 1.8em;
+    text-transform: uppercase; /* All caps for button text */
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -92,7 +93,7 @@ body, html {
 @media only screen and (max-width: 768px) {
     /* Adjustments for smaller screens */
     .site-title {
-        font-size: 3em;
+        font-size: 2.5em; /* Smaller size for small screens */
     }
     .button {
         font-size: 1.5em;
@@ -115,6 +116,6 @@ body, html {
         width: 250px;
     }
     .top-buttons {
-        gap: 80px;
+        gap: 60px; /* Slightly larger gap on large screens */
     }
 }
