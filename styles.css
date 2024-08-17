@@ -84,7 +84,8 @@ body, html {
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
-    width: 200px; /* Consistent button size */
+    width: 250px; /* Ensure all buttons have the same width */
+    height: 70px; /* Ensure consistent height across all buttons */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,6 +108,7 @@ body, html {
         font-size: 1.4em;
         padding: 12px 40px;
         width: 100%; /* Buttons take up full width, maintaining equal size */
+        height: 60px; /* Consistent height adjustment */
     }
     .top-buttons, .bottom-button {
         flex-direction: column;
@@ -126,7 +128,8 @@ body, html {
     .button {
         font-size: 2em;
         padding: 20px 60px;
-        width: 250px; /* Larger consistent button size */
+        width: 300px; /* Larger consistent button size */
+        height: 80px; /* Larger consistent height */
     }
     .top-buttons {
         gap: 70px; /* Larger gap on large screens */
