@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - Sightings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Recipes</h1>
+        <div class="controls">
+            <input type="text" id="search" placeholder="Search recipes..." />
+            <button id="sortBtn">Sort Alphabetically</button>
+        </div>
+        <div class="recipes-list" id="recipesList">
+            <!-- Dynamic list of recipes will be populated here -->
+        </div>
+        <div class="selected-recipes">
+            <h2>Selected Recipes</h2>
+            <ul id="selectedRecipesList"></ul>
+            <h3>Total Ingredients</h3>
+            <ul id="totalIngredientsList"></ul>
+        </div>
+    </div>
+    <script src="recipes.js"></script>
+</body>
+</html>
