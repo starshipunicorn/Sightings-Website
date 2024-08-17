@@ -46,38 +46,45 @@ body, html {
 }
 
 .button-container {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column by default */
-    gap: 20px;
-    justify-items: center;
-    height: 33%; /* Lower third of the page */
+    display: flex;
+    flex-direction: row; /* Horizontal alignment */
+    justify-content: center;
+    gap: 30px; /* Space between the buttons */
     position: absolute;
-    bottom: 10%;
+    bottom: 10%; /* Adjust as needed */
     width: 100%;
 }
 
-@media(min-width: 768px) {
-    .button-container {
-        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
-    }
-    .bottom-button {
-        grid-column: span 2; /* Bottom button spans both columns */
-    }
-}
-
-img {
-    width: 250px; /* Fixed width */
-    height: 70px; /* Fixed height */
-    display: block;
+.button {
+    background-color: #eaff82;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 300;
+    border: none;
+    padding: 15px 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.8em;
+    text-transform: uppercase; /* All caps for button text */
+    border-radius: 50px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease;
+    text-align: center;
 }
 
-img:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover for effect */
+.button:hover {
+    background-color: #d4e075;
 }
 
 @media only screen and (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        align-items: center;
+    }
+
+    .button {
+        width: 80%; /* Make buttons take up more space horizontally on small screens */
+    }
+
     .site-title {
         font-size: 2.2em; /* Smaller size for small screens */
         letter-spacing: 0.1em; /* Further reduce letter spacing to prevent break */
