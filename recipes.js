@@ -1,8 +1,105 @@
 document.addEventListener('DOMContentLoaded', () => {
     const recipes = [
-        { name: 'Recipe 1', ingredients: ['Ingredient 1', 'Ingredient 2'] },
-        { name: 'Recipe 2', ingredients: ['Ingredient 3', 'Ingredient 4'] },
-        // Add more recipes here
+        { 
+            name: 'Celestial Creature Gyro and Meteorite Fries', 
+            ingredients: ['Sliced Potato', 'Tzatziki', 'Pita', 'Cheese', 'Steak'],
+            keywords: ['gyro', 'fries', 'celestial', 'creature', 'meteorite']
+        },
+        { 
+            name: 'Andromeda Invader Curry', 
+            ingredients: ['Sliced Potato', 'Sightings Seasoning', 'Chicken', 'Rice'],
+            keywords: ['curry', 'andromeda', 'invader']
+        },
+        { 
+            name: 'Crater Cinnamon Roll Pancakes', 
+            ingredients: ['Cinnamon', 'Flour', 'Egg', 'Sugar'],
+            keywords: ['pancakes', 'crater', 'cinnamon']
+        },
+        { 
+            name: 'Nebula Nosh Chicken & Waffles', 
+            ingredients: ['Sightings Seasoning', 'Flour', 'Chicken', 'Egg'],
+            keywords: ['waffles', 'nebula', 'nosh', 'chicken']
+        },
+        { 
+            name: 'Extraterrestrial Omelet', 
+            ingredients: ['Sliced Cheese', 'Avocado', 'Egg', 'Jalapenos'],
+            keywords: ['omelet', 'extraterrestrial']
+        },
+        { 
+            name: 'Celestial Caesar Salad', 
+            ingredients: ['Sliced Cheese', 'Lettuce', 'Croutons', 'Caesar Dressing'],
+            keywords: ['salad', 'caesar', 'celestial']
+        },
+        { 
+            name: 'Blackhole Brownies', 
+            ingredients: ['Flour', 'Cocoa Powder', 'Egg', 'Sugar'],
+            keywords: ['brownies', 'blackhole']
+        },
+        { 
+            name: 'Alien Antenna Bites', 
+            ingredients: ['Sliced Cheese', 'Flour', 'Chicken', 'Sightings Seasoning'],
+            keywords: ['bites', 'alien', 'antenna']
+        },
+        { 
+            name: 'Orbiting Onion Rings', 
+            ingredients: ['Sightings Seasoning', 'Flour', 'Sliced Onion', 'Water'],
+            keywords: ['onion', 'rings', 'orbiting']
+        },
+        { 
+            name: 'Martian Mousse', 
+            ingredients: ['Sugar', 'Cocoa Powder', 'Egg', 'Whipped Cream'],
+            keywords: ['mousse', 'martian']
+        },
+        { 
+            name: 'Planetary Pizza', 
+            ingredients: ['Sliced Tomato', 'Cheese', 'Pizza Crust', 'Jalapenos'],
+            keywords: ['pizza', 'planetary']
+        },
+        { 
+            name: 'Galaxy Guac Burger and Meteorite Fries', 
+            ingredients: ['Steak', 'Tomato', 'Bun', 'Avocado', 'Potato'],
+            keywords: ['burger', 'fries', 'galaxy', 'guac', 'meteorite']
+        },
+        { 
+            name: 'Nebula Nectar Cola', 
+            ingredients: ['Cola Syrup', 'Ice', 'Soda Water', 'Sugar'],
+            keywords: ['cola', 'nebula', 'nectar']
+        },
+        { 
+            name: 'Comet Cola Float', 
+            ingredients: ['Soda Water', 'Whipped Cream', 'Cola Syrup', 'Milk'],
+            keywords: ['float', 'cola', 'comet']
+        },
+        { 
+            name: 'Lunar Lemonade', 
+            ingredients: ['Water', 'Ice', 'Sliced Lemon', 'Sugar'],
+            keywords: ['lemonade', 'lunar']
+        },
+        { 
+            name: 'Spacecraft Smores Shake', 
+            ingredients: ['Whipped Cream', 'Cocoa Powder', 'Smores', 'Milk', 'Special Ingredient'],
+            keywords: ['shake', 'smores', 'spacecraft']
+        },
+        { 
+            name: 'UFO Umbrella Drink', 
+            ingredients: ['Orange', 'Grape', 'Tequila'],
+            keywords: ['drink', 'umbrella', 'ufo']
+        },
+        { 
+            name: 'Alien Ambrosia', 
+            ingredients: ['Vodka', 'Sliced Lemon', 'Cracked Coconut'],
+            keywords: ['ambrosia', 'alien']
+        },
+        { 
+            name: 'Asteroid Amaretto Sour', 
+            ingredients: ['Sugar', 'Amaretto', 'Sliced Lemon'],
+            keywords: ['sour', 'amaretto', 'asteroid']
+        },
+        { 
+            name: 'Galactic Grape Cola', 
+            ingredients: ['Grape', 'Ice', 'Soda Water', 'Sugar'],
+            keywords: ['cola', 'grape', 'galactic']
+        }
     ];
 
     const recipesList = document.getElementById('recipesList');
