@@ -58,12 +58,15 @@ body, html {
 
 .top-buttons {
     display: flex;
-    gap: 60px; /* Increased gap between buttons */
+    justify-content: space-around;
+    width: 80%; /* Adjust width to position buttons horizontally */
     margin-bottom: 30px;
 }
 
 .bottom-button {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 80%; /* Ensure the bottom button is centered */
 }
 
 .button {
@@ -79,7 +82,7 @@ body, html {
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
-    min-width: 250px; /* Reduced width */
+    width: 200px; /* Less wide */
 }
 
 .button:hover {
@@ -94,10 +97,10 @@ body, html {
     .button {
         font-size: 1.5em;
         padding: 12px 40px;
-        min-width: 200px;
+        width: 150px;
     }
-    .top-buttons {
-        gap: 40px;
+    .top-buttons, .bottom-button {
+        width: 100%;
     }
 }
 
@@ -109,7 +112,7 @@ body, html {
     .button {
         font-size: 2em;
         padding: 20px 60px;
-        min-width: 300px;
+        width: 250px;
     }
     .top-buttons {
         gap: 80px;
