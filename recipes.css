@@ -14,11 +14,25 @@ body, html {
 }
 
 .container {
-    width: 80%;
+    display: flex;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.95); /* Slightly less transparent */
     border-radius: 10px;
+}
+
+.left-panel {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.right-panel {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .page-title {
@@ -53,9 +67,8 @@ body, html {
 
 .recipes-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .recipe-item {
@@ -63,10 +76,7 @@ body, html {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: calc(50% - 20px); /* Narrower boxes */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -77,19 +87,6 @@ body, html {
 .recipe-item:hover {
     transform: scale(1.05);
     background-color: #f0f8ff;
-}
-
-.recipe-item .recipe-name {
-    flex: 1;
-    font-weight: 700;
-    color: #333;
-}
-
-.recipe-item .recipe-ingredients {
-    flex: 1;
-    text-align: right;
-    font-size: 0.9em;
-    color: #555;
 }
 
 .selected-recipes {
