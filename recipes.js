@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ingredients: ['Sliced Potato', 'Sightings Seasoning', 'Chicken', 'Rice'],
             keywords: ['curry', 'andromeda', 'invader']
         },
-                { 
+        { 
             name: 'Crater Cinnamon Roll Pancakes', 
             ingredients: ['Cinnamon', 'Flour', 'Egg', 'Sugar'],
             keywords: ['pancakes', 'crater', 'cinnamon']
@@ -113,8 +113,19 @@ document.addEventListener('DOMContentLoaded', () => {
         recipes.forEach(recipe => {
             const recipeItem = document.createElement('div');
             recipeItem.className = 'recipe-item';
-            recipeItem.textContent = recipe.name;
+            
+            const recipeName = document.createElement('div');
+            recipeName.className = 'recipe-name';
+            recipeName.textContent = recipe.name;
+
+            const recipeIngredients = document.createElement('div');
+            recipeIngredients.className = 'recipe-ingredients';
+            recipeIngredients.textContent = recipe.ingredients.join(', ');
+
+            recipeItem.appendChild(recipeName);
+            recipeItem.appendChild(recipeIngredients);
             recipeItem.addEventListener('click', () => selectRecipe(recipe));
+
             recipesList.appendChild(recipeItem);
         });
     }
