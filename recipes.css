@@ -134,4 +134,20 @@ body, html {
         text-align: center;
         margin-bottom: 10px;
     }
+
+    .recipe-item {
+        font-weight: 700; /* Bold recipe name */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recipe-item .recipe-name {
+        font-weight: 700; /* Bold recipe name */
+    }
+
+    .recipe-item .recipe-ingredients {
+        font-weight: 400; /* Normal font for ingredients */
+        margin-top: 5px;
+        color: #555; /* Slightly lighter color for ingredients */
+    }
 }
