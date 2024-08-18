@@ -9,20 +9,24 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="page-title">Recipes</h1>
-        <div class="controls">
-            <button id="sortBtn">Sort Alphabetically</button>
-            <button id="clearBtn">Clear</button>
-            <a href="index.html"><button id="backBtn">Back</button></a>
+        <div class="left-panel">
+            <h1 class="page-title">Recipes</h1>
+            <div class="controls">
+                <button id="sortBtn">Sort Alphabetically</button>
+                <button id="clearBtn">Clear</button>
+                <a href="index.html"><button id="backBtn">Back</button></a>
+            </div>
+            <div class="recipes-list" id="recipesList">
+                <!-- Dynamic list of recipes will be populated here -->
+            </div>
         </div>
-        <div class="recipes-list" id="recipesList">
-            <!-- Dynamic list of recipes will be populated here -->
-        </div>
-        <div class="selected-recipes">
-            <h2>Selected Recipes</h2>
-            <ul id="selectedRecipesList"></ul>
-            <h3>Total Ingredients</h3>
-            <ul id="totalIngredientsList"></ul>
+        <div class="right-panel">
+            <div class="selected-recipes">
+                <h2>Selected Recipes</h2>
+                <ul id="selectedRecipesList"></ul>
+                <h3>Total Ingredients</h3>
+                <ul id="totalIngredientsList"></ul>
+            </div>
         </div>
     </div>
     <script src="recipes.js"></script>
