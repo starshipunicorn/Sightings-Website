@@ -7,15 +7,17 @@ body, html {
     font-family: 'Tajawal', sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    height: 100vh;
-    background-image: url('sightingsufo.jpg'); /* Add the background image */
+    min-height: 100vh; /* Ensure the body covers the full height */
+    background-image: url('sightingsufo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     width: 80%;
     margin: 20px auto;
     padding: 20px;
