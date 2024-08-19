@@ -29,7 +29,7 @@ function calculateTotal() {
         const quantity = document.getElementById(item).value;
         if (quantity > 0) {
             subtotal += prices[item] * quantity;
-            summary.push(`${quantity} x ${item.replace(/item(\d+)/, (match, p1) => getItemName(p1))} @ $${prices[item].toFixed(2)} each`);
+            summary.push(`${quantity} x ${getItemName(item)} @ $${prices[item].toFixed(2)} each`);
         }
     }
 
@@ -47,28 +47,40 @@ function calculateTotal() {
     document.getElementById("summary").innerHTML = summary.join('<br>');
 }
 
-function getItemName(index) {
-    const itemNames = [
-        "Crater Cinnamon Roll Pancakes",
-        "Nebula Nosh Chicken & Waffles",
-        "Extraterrestrial Omelet",
-        "Celestial Caesar Salad",
-        "Alien Antenna Bites",
-        "Orbiting Onion Rings",
-        "Celestial Creature Gyro",
-        "Andromeda Invader Curry",
-        "Planetary Pizza",
-        "Galaxy Guac Burger and Meteorite Fries",
-        "Spacecraft S’mores Shake",
-        "Blackhole Brownies",
-        "Martian Mousse",
-        "UFO Umbrella Drink",
-        "Asteroid Amaretto Sour",
-        "Alien Ambrosia",
-        "Lunar Lemonade",
-        "Comet Cola Float",
-        "Galactic Grape Cola",
-        "Nebula Nectar Cola"
-    ];
-    return itemNames[index - 1];
+function getItemName(id) {
+    const itemNames = {
+        item1: "Crater Cinnamon Roll Pancakes",
+        item2: "Nebula Nosh Chicken & Waffles",
+        item3: "Extraterrestrial Omelet",
+        item4: "Celestial Caesar Salad",
+        item5: "Alien Antenna Bites",
+        item6: "Orbiting Onion Rings",
+        item7: "Celestial Creature Gyro",
+        item8: "Andromeda Invader Curry",
+        item9: "Planetary Pizza",
+        item10: "Galaxy Guac Burger and Meteorite Fries",
+        item11: "Spacecraft S’mores Shake",
+        item12: "Blackhole Brownies",
+        item13: "Martian Mousse",
+        item14: "UFO Umbrella Drink",
+        item15: "Asteroid Amaretto Sour",
+        item16: "Alien Ambrosia",
+        item17: "Lunar Lemonade",
+        item18: "Comet Cola Float",
+        item19: "Galactic Grape Cola",
+        item20: "Nebula Nectar Cola"
+    };
+    return itemNames[id];
+}
+
+function increment(id) {
+    const input = document.getElementById(id);
+    input.value = parseInt(input.value) + 1;
+}
+
+function decrement(id) {
+    const input = document.getElementById(id);
+    if (parseInt(input.value) > 0) {
+        input.value = parseInt(input.value) - 1;
+    }
 }
