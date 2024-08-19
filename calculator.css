@@ -52,6 +52,14 @@ h1 {
     padding: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.quantity-input input::-webkit-outer-spin-button,
+.quantity-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .quantity-input button {
@@ -62,6 +70,7 @@ h1 {
     cursor: pointer;
     font-weight: bold;
     width: 30px;
+    font-size: 1.2em;
 }
 
 .quantity-input button:hover {
