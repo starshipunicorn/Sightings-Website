@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sightings Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Sightings Calculator 🌌</h1>
+
+        <div class="settings">
+            <label for="discount">Discount (%):</label>
+            <input type="number" id="discount" name="discount" min="0" max="100" value="0">
+
+            <label for="fee">Additional Fee (%):</label>
+            <input type="number" id="fee" name="fee" min="0" max="100" value="0">
+        </div>
+
+        <div class="menu-section">
+            <h2>🌅 Breakfast</h2>
+            <div class="menu-items">
+                <label for="item1">Crater Cinnamon Roll Pancakes ($73.50):</label>
+                <input type="number" id="item1" name="item1" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item2">Nebula Nosh Chicken & Waffles ($115.50):</label>
+                <input type="number" id="item2" name="item2" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item3">Extraterrestrial Omelet ($87.50):</label>
+                <input type="number" id="item3" name="item3" min="0" max="500" value="0">
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>🍲 Starters</h2>
+            <div class="menu-items">
+                <label for="item4">Celestial Caesar Salad ($70.00):</label>
+                <input type="number" id="item4" name="item4" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item5">Alien Antenna Bites ($98.00):</label>
+                <input type="number" id="item5" name="item5" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item6">Orbiting Onion Rings ($52.50):</label>
+                <input type="number" id="item6" name="item6" min="0" max="500" value="0">
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>🍽️ Mains</h2>
+            <div class="menu-items">
+                <label for="item7">Celestial Creature Gyro ($115.50):</label>
+                <input type="number" id="item7" name="item7" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item8">Andromeda Invader Curry ($105.00):</label>
+                <input type="number" id="item8" name="item8" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item9">Planetary Pizza ($70.00):</label>
+                <input type="number" id="item9" name="item9" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item10">Galaxy Guac Burger and Meteorite Fries ($122.50):</label>
+                <input type="number" id="item10" name="item10" min="0" max="500" value="0">
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>🍰 Desserts</h2>
+            <div class="menu-items">
+                <label for="item11">Spacecraft S’mores Shake ($56.00):</label>
+                <input type="number" id="item11" name="item11" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item12">Blackhole Brownies ($66.50):</label>
+                <input type="number" id="item12" name="item12" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item13">Martian Mousse ($73.50):</label>
+                <input type="number" id="item13" name="item13" min="0" max="500" value="0">
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>🍹 Alcoholic Drinks</h2>
+            <div class="menu-items">
+                <label for="item14">UFO Umbrella Drink ($50.00):</label>
+                <input type="number" id="item14" name="item14" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item15">Asteroid Amaretto Sour ($57.50):</label>
+                <input type="number" id="item15" name="item15" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item16">Alien Ambrosia ($62.50):</label>
+                <input type="number" id="item16" name="item16" min="0" max="500" value="0">
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>🥤 Non-Alcoholic Drinks</h2>
+            <div class="menu-items">
+                <label for="item17">Lunar Lemonade ($27.50):</label>
+                <input type="number" id="item17" name="item17" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item18">Comet Cola Float ($32.50):</label>
+                <input type="number" id="item18" name="item18" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item19">Galactic Grape Cola ($27.50):</label>
+                <input type="number" id="item19" name="item19" min="0" max="500" value="0">
+            </div>
+            <div class="menu-items">
+                <label for="item20">Nebula Nectar Cola ($27.50):</label>
+                <input type="number" id="item20" name="item20" min="0" max="500" value="0">
+            </div>
+        </div>
+
+        <button onclick="calculateTotal()">Calculate Total</button>
+
+        <div id="results">
+            <h2>Order Summary</h2>
+            <p id="summary"></p>
+            <h3>Subtotal: <span id="subtotal"></span></h3>
+            <h3>Total: <span id="total"></span></h3>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
