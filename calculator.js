@@ -26,7 +26,7 @@ function calculateTotal() {
     const summary = [];
 
     for (let item in prices) {
-        const quantity = document.getElementById(item).value;
+        const quantity = parseInt(document.getElementById(item).value);
         if (quantity > 0) {
             subtotal += prices[item] * quantity;
             summary.push(`${quantity} x ${getItemName(item)} @ $${prices[item].toFixed(2)} each`);
