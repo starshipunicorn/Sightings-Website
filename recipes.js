@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         { 
             name: 'Planetary Pizza', 
-            ingredients: ['Sliced Tomato', 'Cheese', 'Pizza Crust', 'Jalapenos'],
+            ingredients: ['Tomato', 'Cheese', 'Pizza Crust', 'Jalapenos'],
             keywords: ['pizza', 'planetary']
         },
         { 
