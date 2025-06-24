@@ -1,104 +1,114 @@
 document.addEventListener('DOMContentLoaded', () => {
     const recipes = [
-        { 
-            name: 'Celestial Creature Gyro and Meteorite Fries', 
-            ingredients: ['Sliced Potato', 'Tzatziki', 'Pita', 'Cheese', 'Steak'],
-            keywords: ['gyro', 'fries', 'celestial', 'creature', 'meteorite']
+        {
+            name: "Andromeda Invader Curry",
+            ingredients: ['chicken', 'sightingsseasoning', 'slicedpotato', 'rice'],
+            keywords: ['andromeda', 'invader', 'curry']
         },
-        { 
-            name: 'Andromeda Invader Curry', 
-            ingredients: ['Sliced Potato', 'Sightings Seasoning', 'Chicken', 'Rice'],
-            keywords: ['curry', 'andromeda', 'invader']
+        {
+            name: "Blackhole Brownies",
+            ingredients: ['cacao', 'egg', 'sugar', 'flour'],
+            keywords: ['blackhole', 'brownies']
         },
-        { 
-            name: 'Crater Cinnamon Roll Pancakes', 
-            ingredients: ['Cinnamon', 'Flour', 'Egg', 'Sugar'],
-            keywords: ['pancakes', 'crater', 'cinnamon']
+        {
+            name: "Supernova Breakfast Sandwich",
+            ingredients: ['bun', 'bacon', 'egg', 'slicedcheese'],
+            keywords: ['supernova', 'breakfast', 'sandwich']
         },
-        { 
-            name: 'Nebula Nosh Chicken & Waffles', 
-            ingredients: ['Sightings Seasoning', 'Flour', 'Chicken', 'Egg'],
-            keywords: ['waffles', 'nebula', 'nosh', 'chicken']
+        {
+            name: "Big Dipper Birria Tacos",
+            ingredients: ['steak', 'lime', 'cheese', 'corn_tortillas', 'sightingsseasoning'],
+            keywords: ['big dipper', 'birria', 'tacos']
         },
-        { 
-            name: 'Extraterrestrial Omelet', 
-            ingredients: ['Sliced Cheese', 'Avocado', 'Egg', 'Jalapenos'],
-            keywords: ['omelet', 'extraterrestrial']
+        {
+            name: "Crater Cinnamon Roll Pancakes",
+            ingredients: ['flour', 'egg', 'cinnamon', 'sugar'],
+            keywords: ['crater', 'cinnamon', 'pancakes']
         },
-        { 
-            name: 'Celestial Caesar Salad', 
-            ingredients: ['Sliced Cheese', 'Lettuce', 'Croutons', 'Caesar Dressing'],
-            keywords: ['salad', 'caesar', 'celestial']
+        {
+            name: "Cosmic Corndog",
+            ingredients: ['hotdogs', 'slicedcheese', 'flour', 'sightingsseasoning'],
+            keywords: ['cosmic', 'corndog']
         },
-        { 
-            name: 'Blackhole Brownies', 
-            ingredients: ['Flour', 'Cocoa Powder', 'Egg', 'Sugar'],
-            keywords: ['brownies', 'blackhole']
+        {
+            name: "Galaxy Guac Burger and Meteorite Fries",
+            ingredients: ['bun', 'steak', 'farm_tomato', 'avocado', 'farm_potato'],
+            keywords: ['galaxy', 'guac', 'burger', 'meteorite', 'fries']
         },
-        { 
-            name: 'Alien Antenna Bites', 
-            ingredients: ['Sliced Cheese', 'Flour', 'Chicken', 'Sightings Seasoning'],
-            keywords: ['bites', 'alien', 'antenna']
+        {
+            name: "Nebula Nosh Chicken & Waffles",
+            ingredients: ['chicken', 'flour', 'egg', 'sightingsseasoning'],
+            keywords: ['nebula', 'nosh', 'chicken', 'waffles']
         },
-        { 
-            name: 'Orbiting Onion Rings', 
-            ingredients: ['Sightings Seasoning', 'Flour', 'Sliced Onion', 'Water'],
-            keywords: ['onion', 'rings', 'orbiting']
+        {
+            name: "Protostar Pulled Pork Sandwich",
+            ingredients: ['farm_potato', 'pork_shoulder', 'bun', 'sightingsseasoning', 'bbq_sauce'],
+            keywords: ['protostar', 'pulled', 'pork', 'sandwich']
         },
-        { 
-            name: 'Martian Mousse', 
-            ingredients: ['Sugar', 'Cocoa Powder', 'Egg', 'Whipped Cream'],
-            keywords: ['mousse', 'martian']
+        {
+            name: "Planetary Pizza",
+            ingredients: ['pizzacrust', 'cheese', 'farm_tomato', 'jalapenos'],
+            keywords: ['planetary', 'pizza']
         },
-        { 
-            name: 'Planetary Pizza', 
-            ingredients: ['Tomato', 'Cheese', 'Pizza Crust', 'Jalapenos'],
-            keywords: ['pizza', 'planetary']
+        {
+            name: "Pie in the Sky",
+            ingredients: ['slicedcherries', 'flour', 'sugar', 'whippedcream'],
+            keywords: ['pie', 'cherry', 'sky']
         },
-        { 
-            name: 'Galaxy Guac Burger and Meteorite Fries', 
-            ingredients: ['Steak', 'Tomato', 'Bun', 'Avocado', 'Potato'],
-            keywords: ['burger', 'fries', 'galaxy', 'guac', 'meteorite']
+        {
+            name: "Choco Milky Way",
+            ingredients: ['milk', 'flour', 'sugar', 'whippedcream', 'cacao'],
+            keywords: ['choco', 'milky way', 'chocolate']
         },
-        { 
-            name: 'Nebula Nectar Cola', 
-            ingredients: ['Cola Syrup', 'Ice', 'Soda Water', 'Sugar'],
-            keywords: ['cola', 'nebula', 'nectar']
+        {
+            name: "Astronaut Ice Cream",
+            ingredients: ['slicedstrawberries', 'cacao', 'whippedcream'],
+            keywords: ['astronaut', 'ice cream']
         },
-        { 
-            name: 'Comet Cola Float', 
-            ingredients: ['Soda Water', 'Whipped Cream', 'Cola Syrup', 'Milk'],
-            keywords: ['float', 'cola', 'comet']
+        {
+            name: "Nutrient Infuser",
+            ingredients: ['planetarypizza', 'galacticgrapecola', 'farm_special'],
+            keywords: ['nutrient', 'infuser']
         },
-        { 
-            name: 'Lunar Lemonade', 
-            ingredients: ['Water', 'Ice', 'Sliced Lemon', 'Sugar'],
-            keywords: ['lemonade', 'lunar']
+        {
+            name: "Martian Mousse",
+            ingredients: ['cacao', 'whippedcream', 'egg', 'sugar'],
+            keywords: ['martian', 'mousse']
         },
-        { 
-            name: 'Spacecraft Smores Shake', 
-            ingredients: ['Whipped Cream', 'Cocoa Powder', 'Smores', 'Milk', 'Special Ingredient'],
-            keywords: ['shake', 'smores', 'spacecraft']
+        {
+            name: "Starlight Lemonade",
+            ingredients: ['slicedlemon', 'slicedstrawberries', 'ice'],
+            keywords: ['starlight', 'lemonade', 'strawberry']
         },
-        { 
-            name: 'UFO Umbrella Drink', 
-            ingredients: ['Orange', 'Grape', 'Tequila'],
-            keywords: ['drink', 'umbrella', 'ufo']
+        {
+            name: "Comet Cola Float",
+            ingredients: ['whippedcream', 'colasyrup', 'milk', 'sodawater'],
+            keywords: ['comet', 'cola', 'float']
         },
-        { 
-            name: 'Alien Ambrosia', 
-            ingredients: ['Vodka', 'Sliced Lemon', 'Cracked Coconut'],
-            keywords: ['ambrosia', 'alien']
+        {
+            name: "Galactic Grape Cola",
+            ingredients: ['grape', 'sodawater', 'sugar', 'ice'],
+            keywords: ['galactic', 'grape', 'cola']
         },
-        { 
-            name: 'Asteroid Amaretto Sour', 
-            ingredients: ['Sugar', 'Amaretto', 'Sliced Lemon'],
-            keywords: ['sour', 'amaretto', 'asteroid']
+        {
+            name: "Lunar Lemonade",
+            ingredients: ['slicedlemon', 'water', 'sugar', 'ice'],
+            keywords: ['lunar', 'lemonade']
         },
-        { 
-            name: 'Galactic Grape Cola', 
-            ingredients: ['Grape', 'Ice', 'Soda Water', 'Sugar'],
-            keywords: ['cola', 'grape', 'galactic']
+        {
+            name: "Nebula Nectar Cola",
+            ingredients: ['sodawater', 'sugar', 'ice', 'colasyrup'],
+            keywords: ['nebula', 'nectar', 'cola']
+        },
+        {
+            name: "Spacecraft Smores Shake",
+            ingredients: ['milk', 'cacao', 'smores', 'whippedcream', 'farm_special'],
+            keywords: ['spacecraft', 'smores', 'shake']
+        },
+        {
+            name: "Horchata",
+            ingredients: ['rice', 'cinnamon', 'sugar', 'water'],
+            keywords: ['horchata']
         }
     ];
 
