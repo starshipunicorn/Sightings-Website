@@ -105,6 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
             ingredients: ['milk', 'cacao', 'smores', 'whippedcream', 'farm_special'],
             keywords: ['spacecraft', 'smores', 'shake']
         },
+         {
+            name: "Orbiting Onion Rings",
+            ingredients: ['sliced onion', 'water', 'flour'],
+            keywords: ['orbiting', 'onion', 'ring']
+        },
         {
             name: "Horchata",
             ingredients: ['rice', 'cinnamon', 'sugar', 'water'],
@@ -187,4 +192,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     displayRecipes();
 });
+
 
