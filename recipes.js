@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: "Galaxy Guac Burger and Meteorite Fries",
-            ingredients: ['bun', 'steak', 'farm_tomato', 'avocado', 'farm_potato'],
+            ingredients: ['bun', 'steak', 'farm_tomato', 'avocado'],
             keywords: ['galaxy', 'guac', 'burger', 'meteorite', 'fries']
         },
         {
@@ -187,3 +187,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     displayRecipes();
 });
+
